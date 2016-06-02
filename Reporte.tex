@@ -90,13 +90,27 @@ Se denota a T, LH y LHRH por $T(t) L(t)$ y $R(t)$ respectivamente. Para una prim
 
 Donde el comportamiento del sistema está representado por las siguientes ecuaciones.
 
-$$ \frac{dR}{dt} = f(T)-b_{1}R$$
-$$ \frac{dL}{dt} = g_{1}R-b_{2}L $$
-$$ \frac{dT}{dt} = g_{2}L-b_{3}T $$
+\begin{equation}
+\frac{dR}{dt} = f(T)-b_{1}R
+\label{eqdr}
+\end{equation}
 
-Matemáticamente $b_{1}$, $b_{2}$, $b_{3}$, $g_{1}$, $g_{2}$ son parámetros positivos. Biológicamente $g_{1}$,$g_{2}$ y $f(T)$ son las tasas de secreción de las hormonas LHRH, LH y T respectivamente. Además  $g_{1}$,$g_{2}$ son los valores de prealimentación para R y L respectivamente, mientras que f(T) es una función de retroalimentación para las dos hormonas precursoras. Por tanto deben estar representadas por funciones monótonas crecientes. Por otro lado $b_{1}$, $b_{2}$, $b_{3}$ represetan la tasa de difussión de las hormonas
+\begin{equation}
+\frac{dL}{dt} = g_{1}R-b_{2}L
+\label{eqdl}
+\end{equation}
 
-A este modelo general se le llama "feedback repression model". Para los puntos de estabilidad se tiene lo siguiente:
+\begin{equation}
+ \frac{dT}{dt} = g_{2}L-b_{3}T 
+ \label{eqdt}
+\end{equation}
+
+
+Matemáticamente $b_{1}$, $b_{2}$, $b_{3}$, $g_{1}$, $g_{2}$ son parámetros positivos. Biológicamente $g_{1}$,$g_{2}$ y $f(T)$ son las tasas de secreción de las hormonas LHRH, LH y T respectivamente. Además  $g_{1}$,$g_{2}$ son los valores de prealimentación para R y L respectivamente, mientras que f(T) es una función de retroalimentación para las dos hormonas precursoras. Por tanto deben estar representadas por funciones monótonas crecientes. Por otro lado $b_{1}$, $b_{2}$, $b_{3}$ represetan la tasa de difusión de las hormonas en el torrent sanguinio. Ambos están dados en valores de concentración por hora.
+
+A este modelo general se le llama "feedback repression model". Para los puntos de estabilidad se tiene lo siguiente:\\
+
+Las ecuaciones \ref{eqdl}, \ref{eqdr} y \ref{eqdt} tienen sólución en
 
 $$R_{0} = \frac{f(T_{0})}{b_{1}}$$
 
@@ -130,6 +144,46 @@ Donde
 $$ z(t)=T(t)-T_{0} $$
 $$ y(t)=L(t)-L_{0} $$
 $$ x(t)=R(t)-R_{0} $$
+
+\section*{Modelo para la esquizofrenia catatónica}
+
+Danzinger y Elmergreen postularon en (1956) un trabajo (analziado posteriormente por Cronin en 1976) en donde se modela matemáticamente la esquizofrenia catatónica periódica, este modelo es similar a:
+
+$$ \frac{dR}{dt} = f(T)-b_{1}R$$
+$$ \frac{dL}{dt} = g_{1}R-b_{2}L $$
+$$ \frac{dT}{dt} = g_{2}L-b_{3}T $$
+
+pero la función de retroalimentación f(t) que emplearon en este caso es de la forma:
+
+$$ f(z) = (c-hz)[1-H(z-c/h)]  $$
+
+Donde $H(z)$ es la función escalón de Heaviside y $c,h$ son constantes y en donde los criterios de inestabilidad son (7) son:
+
+$$ K = \dfrac{g_1 g_2 h}{b_1 b_2 b_3} > \dfrac{a_1 a_2}{a_3} - 1 $$
+
+Dejando el criterio para (9):
+
+$$ K = \dfrac{g_1 g_2 h}{b_1 b_2 b_3} > 8 $$ 
+
+El análisis de Cronin mostró que cuando el punto de equilibrio es estable, no existen soluciones periódicas, sin embargo, cuando el punto de equilibrio es inestable las soluciones son periódicas, casi periódicas u oscilan de manera no peródica.
+
+Desde el punto de vista fisiológico, el modelo descrito por Danzinger y Elmergreen remplaza R, L, T por la hormona tirotropina, una enzima intermediaria y la hormona tiroidea, respectivamente. La esquizofrenia catatónica periódica se caracteriza por variaciones oscilantes de las concentraciones de estas hormonas, mientras que el estado saludable es caracterizado por una concentración constante de éstas. Estas situaciones corresponden, respectivamente, a puntos de equilibrio inestables y estables de:  
+
+$$ \frac{dR}{dt} = (c-hT)[1-H(T-c/h)]-b_{1}R$$
+$$ \frac{dL}{dt} = g_{1}R-b_{2}L $$
+$$ \frac{dT}{dt} = g_{2}L-b_{3}T $$
+
+
+Danzinger y Elmergreen usaron este modelo para proponer un tratamiento para la esquizofrenia catatónica, en el cual si se añade un término constante al 3er término de la última ecuación, que sería el equivalente de tener una secreción constante de la hormona tiroidea, convierte la solución de equilibrio intestable (patológica) a una estable, recuperando el estado saludable para el paciente (normal). 
+
+\section{Comparación entre el modelo de DE y el de secreción de testosterona}
+
+En el modelo DE para la esquizofrenia catatónica periódica y el modelo de secreción de testosterona, el estado "normal" y el "patológico" del sistema están intercambiados. Para la secreción de testosterona, concentraciones hormonales oscilantes corresponden al estado normal, mientras que en el modelo DE el estado normal se da con concentraciones hormonales constantes.
+
+
+\section{Implicaciones biológicas del modelo}
+
+
 
 \section{Resultados}
 
