@@ -1,0 +1,138 @@
+\documentclass[letter,11pt]{article}
+\usepackage{animate}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[math,]{kurier}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage[columnsep=10pt,left=2cm,top=2.3cm,right=2cm,bottom=2.3cm]{geometry}
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}\usepackage{booktabs}
+\usepackage{lettrine} % The lettrine is the first enlarged
+\usepackage{paralist} % Used for the compactitem environment
+\usepackage{mathtools}
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries\large} %Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} %Set the abstract itself to small italic text
+\usepackage{graphicx}
+\usepackage[spanish,mexico]{babel}
+\usepackage{amsmath} %simbolos matematicos
+\usepackage{multicol}  %texto a varias columnas
+\usepackage{enumerate}
+\usepackage{float} 
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead[]{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[L]{} % Custom header text
+\fancyfoot[C]{\thepage} % Custom footer text
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+\title{Oscilaciones en Sistemas biológicos}
+\author{Alejandro Hernández de la Vega \\ César Daniel Rodríguez Rosenblueth \\ Eva Yazmín Santiago Santos}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+
+\section{Osciladores Biológicos}
+
+Bien sea la respiración, la elaboración de marcapasos para asistir la actividad cardiaca o la secreción de testosterona en los hombres, existen varios sistemas biológicos que exhiben un carácter oscilatorio. Una primera aproximación para el estudio de estos sistemas desemboca en ecuaciones diferenciales ordinarias del tipo:
+
+$$\dfrac{du}{dt} = f(u)$$
+
+Donde, para sistemas periódicos se tiene:
+
+$$u(t+T)= (t) $$
+
+con el periodo $T>0$
+
+No obstante, existen casos (como en la síntesis de enzimas durante la división celular o en el estudiado en este trabajo) donde el sistema viene regulado por un control de retroalimentación. En este sentido, el sistema viene dado por una serie de reacciones ligadas, llevándose acabo una reacción seguida de otra y en donde la primera de éstas viene regulada por una función de retroalimentación que involucra la última reacción, i.e. si tenemos n reacciones:
+$$ \dfrac{d u_1}{dt} = f(u_n )k_1 u_1 $$ 
+$$ \dfrac{d u_r}{dt}= u_{r-1} -k_r u_r $$
+
+con $r=2,3,...,n$ , $ k_r > 0 $ constantes determinadas por el sistema en cuestión y $ f(u)$ la función de retroalimentación.
+
+Los trabajos de Tyson y de Othmer(1978) y Yagil (1971) muestran que la función de retroalimentación tiene que ser una función siempre positiva y monótona decreciente para asegurar la unicidad de las soluciones de estado estacionario.
+
+\section{Características de la Testosterona}
+
+La testosterona es una hormona cuya función principal es estimular el desarrollo de los caracteres sexuales masculinos, y está presente en mamíferos, reptiles y aves. Para el ser humano, en los hombres el nivel de testosterona se encuentra entre 10-35 nanomoles por litro de sangre, mientras que en las mujeres es de 0.7-2.7 nanomoles por litro. La testosterona es principalmente producida en los testículos en los hombres y en los ovarios de las mujeres, en los hombres, los niveles de testoterona oscilan con un periodo de 2 a 3 horas.
+
+Existen cambios de personalidad relacionados con la concentración de testosterona en la sangre, por ejemplo niveles bajos de testosterona vienen acompañados con actitudes dóciles en los sujetos, además, pacientes que padecen de cáncer de próstata, son sometidos a un tratamiento que involucra la toma de Goserelina, una droga que al término de un par de semanas reduce el nivel de testosterona al grado que se alcanzaría a través de la castración. 
+
+\subsection{Secreción de la Testosterona}
+
+La secreción de testosterona (T) por parte de las gónadas viene regulada por la hormona luteinizante (LH) generada en la glándula pituitaria, esta última viene regulada, a su vez, por la hormona liberadora de hormona luteinizante (LHRH) que es secretada en el hipotálamo. Además la testosterona ejerce una retroalimentación en la producción de LHRH. 
+
+Entonces, en este sistema, el hipotálamo secreta hormona liberadora de hormona luteinizante que es llevada a través del torrente sanguíneo a la glándula pituitaria, donde se controla la secreción de hormona luteinizante que finalmente controla la producción de testosterona en las gónadas, es entonces que se ejerce la retroalimentación entre de los testículos hacia el hipotálamo.\\
+
+Se denota a T, LH y LHRH por $T(t) L(t)$ y $R(t)$ respectivamente. Para una primera aproximación se utiliza el siguiente modelo:
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Diagramas/diagram2.png}
+\end{center}
+
+Donde el comportamiento del sistema está representado por las siguientes ecuaciones.
+
+$$ \frac{dR}{dt} = f(T)-b_{1}R$$
+$$ \frac{dL}{dt} = g_{1}R-b_{2}L $$
+$$ \frac{dT}{dt} = g_{2}L-b_{3}T $$
+
+Matemáticamente $b_{1}$, $b_{2}$, $b_{3}$, $g_{1}$, $g_{2}$ son parámetros positivos. Biológicamente $g_{1}$,$g_{2}$ y $f(T)$ son las tasas de secreción de las hormonas LHRH, LH y T respectivamente. Además  $g_{1}$,$g_{2}$ son los valores de prealimentación para R y L respectivamente, mientras que f(T) es una función de retroalimentación para las dos hormonas precursoras. Por tanto deben estar representadas por funciones monótonas crecientes. Por otro lado $b_{1}$, $b_{2}$, $b_{3}$ represetan la tasa de difussión de las hormonas
+
+A este modelo general se le llama "feedback repression model". Para los puntos de estabilidad se tiene lo siguiente:
+
+$$R_{0} = \frac{f(T_{0})}{b_{1}}$$
+
+$$L_{0} = \frac{b_{3}}{g_{2}}T_{0}$$
+
+Donde $T_{0}>0$ satisface $g_{1}g_{2}f(T_{0}) = b_{1}b_{2}b_{3}T_{0}.$\\
+
+Cuando $f'(T_{0}) < 0$ no hay estabilidad: 
+
+(i) si y sólo si 
+
+$$-\frac{g_{1}g_{2}f'(T_{0})}{b_{1}} > \frac{a_{1}a_{2}}{a_{3}}-1$$
+
+Donde:
+
+$$a_{1} = b_{1}+b_{2}+b_{3}$$
+$$a_{2}=b_{1}b_{2}+b_{1}b_{3}+b_{2}b_{3}$$
+$$a_{3}=b_{1}b_{2}b_{3}$$
+
+(ii) si 
+
+$$-\frac{T_{0}f'(T_{0})}{f(T_{0})}$$\\
+
+Alrededor del punto de equilibrio:
+
+$$ \frac{dx}{dt} = f'(T_{0})z-b_{1}x$$
+$$ \frac{dy}{dt} = g_{1}x-b_{2}y $$
+$$ \frac{dz}{dt} = g_{2}y(t-\tau)-b_{3}T $$
+
+Donde
+$$ z(t)=T(t)-T_{0} $$
+$$ y(t)=L(t)-L_{0} $$
+$$ x(t)=R(t)-R_{0} $$
+
+\section{Resultados}
+
+
+
+\end{document}
