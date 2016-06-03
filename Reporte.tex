@@ -132,13 +132,13 @@ $$a_{3}=b_{1}b_{2}b_{3}$$
 
 (ii) si 
 
-$$-\frac{T_{0}f'(T_{0})}{f(T_{0})}$$\\
+$$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$\\
 
 Alrededor del punto de equilibrio:
 
 $$ \frac{dx}{dt} = f'(T_{0})z-b_{1}x$$
 $$ \frac{dy}{dt} = g_{1}x-b_{2}y $$
-$$ \frac{dz}{dt} = g_{2}y(t-\tau)-b_{3}T $$
+$$ \frac{dz}{dt} = g_{2}yt-b_{3}T $$
 
 Donde
 $$ z(t)=T(t)-T_{0} $$
@@ -184,9 +184,62 @@ En el modelo DE para la esquizofrenia catatónica periódica y el modelo de secr
 \section{Implicaciones biológicas del modelo}
 
 
-
 \section{Resultados}
 
+\subsubsection{Función Testosterone1}
 
+La función testosterone1 resuelve utilizando coeficientes de Taylor la ecuación diferencial
+
+$$R'(t) = f(T) -b_{1}R(t)$$
+$$L'(t) = g_{1}R(t)-b_{2}L(t)$$
+$$T'(t) = g_{2}L(t)-b_{3}T(t)$$
+
+Donde la función de retroalimentación está dada por
+
+$$f(T) = \frac{A}{K+T^{m}}$$
+
+La función recibe los valores en el siguiente orden\\
+
+Testosterone1(p,R0,T0,L0,t0,tf,g1,g2,b1,b2,b3,A,K,m)\\
+
+Donde 'p' determina el orden del polinomio de Taylor a utilizar. Las letras como R0 representan el valor inicital de R al tiempo 0. Por otro, lado t0 y tf determinan el tiempo inicial y final en el que se requiere la solución, y las tasas de difusión de las hormonas están dadas por b1,b2 y b3; las tasas de secreción y prealimentación, por g1 y g2.\\
+
+La función regresa cuatro arreglos en el siguiente orden: t,R,L,T correspondientes al valor de las funciones en ese tiempo.\\
+
+Los valores iniciales son: $R0 = 1.0$, $L0=2.0$, y $T0 = 1.5$
+
+Al variar el parámetro $m$ se obtiene que la concentración de la testosterona en la sange oscila de forma distinta. Para un valor de $m>10$ se presenta un sistema periodico estable, después de un inestabilidad inicial. Para valores de $m<9.7$ el sistema decae a un valor constante. A continuación se presenta una gráfica del este comportamiento con cuatros valores distintos para $m$: 
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Graficas/testosterona1.png}
+\end{center}
+
+Haciendo lo mismo para la concentración de LHRL en la sangre se obtiene:
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Graficas/LHRL1.png}
+\end{center}
+
+Y para la concentración de LH en la sangre se obtiene:
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Graficas/LH1.png}
+\end{center}
+
+Fijando un valor para $m$ se realiza una comparación de la concentración de cada hormona en la sangre. En este caso, se toma $m=12$ y se obtiene:
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Graficas/hormonas1.png}
+\end{center}
+
+\begin{center}
+ \includegraphics[width=3in]{imagenes/Graficas/hormonas2.png}
+\end{center}
+
+\section{Referencias}
+
+[1] Murray, J. D. 1989. Mathematical Biology. Volume 19. 
+
+[2] Smith, William R. "Hypothalamic regulation of pituitary secretion of luteinizing hormone—II feedback control of gonadotropin secretion." Bulletin of Mathematical Biology 42.1 (1980): 57-78.
 
 \end{document}
