@@ -32,13 +32,13 @@
 \frametitle{Osciladores Biológicos}
 Su estudio se basa en ecuaciones diferenciales del tipo:
 
-$$\dfrac{du}{dt} = f(u)$$
+$$\dfrac{du}{dt} = f(u) ,$$
 
 Donde, para sistemas periódicos se tiene:
 
-$$u(t+T)= (t) $$
+$$u(t+T)= (t) ,$$
 
-con el periodo $T>0$
+con el periodo $T>0$.
 \end{frame}
 
 \begin{frame}
@@ -47,10 +47,10 @@ En algunas ocaciones el sistema está regulado por un control de retroalimentaci
 $\rightarrow$  Serie de reacciones ligadas
 $\rightarrow$ La primera está regulada por una función de retroalimentación.\\
 
-$$ \dfrac{d u_1}{dt} = f(u_n )k_1 u_1 $$ 
-$$ \dfrac{d u_r}{dt}= u_{r-1} -k_r u_r $$
+$$ \dfrac{d u_1}{dt} = f(u_n )k_1 u_1 , $$
+$$ \dfrac{d u_r}{dt}= u_{r-1} -k_r u_r , $$
 
-con $r=2,3,...,n$ , $ k_r > 0 $ constantes determinadas por el sistema en cuestión y $ f(u)$ la función de retroalimentación.
+con $r=2,3,...,n$ , $ k_r > 0$ son constantes determinadas por el sistema en cuestión y $ f(u)$ es la función de retroalimentación.
 \end{frame}
 
 
@@ -82,40 +82,26 @@ Se denota a T, LH y LHRH por $T(t) L(t)$ y $R(t)$ respectivamente.
 \frametitle{Comportamiento del Sistema}
 \begin{block}{}
 Está representado por las siguientes ecuaciones:
-$$\frac{dR}{dt} = f(T)-b_{1}R$$
-$$\frac{dL}{dt} = g_{1}R-b_{2}L$$
-$$ \frac{dT}{dt} = g_{2}L-b_{3}T $$
+$$\frac{dR}{dt} = f(T)-b_{1}R ,$$
+$$\frac{dL}{dt} = g_{1}R-b_{2}L ,$$
+$$ \frac{dT}{dt} = g_{2}L-b_{3}T .$$
 \end{block}
 \begin{block}{}
 $b_{1}$, $b_{2}$, $b_{3}$, $g_{1}$, $g_{2}$ son parámetros positivos.\\
-$g_{1}$,$g_{2}$ y $f(T)$ son las tasas de secreción\\
-$g_{1}$,$g_{2}$ son los valores de prealimentación\\
+$g_{1}$,$g_{2}$ y $f(T)$ son las tasas de secreción.\\
+$g_{1}$,$g_{2}$ son los valores de prealimentación.\\
 \end{block}
 \end{frame}
 
 \begin{frame}
 \frametitle{Puntos de Estabilidad}
-Las ecuaciones anteriores tienen sólución en:
+Las ecuaciones anteriores tienen solución en:
 
-$$R_{0} = \frac{f(T_{0})}{b_{1}}$$
+$$R_{0} = \frac{f(T_{0})}{b_{1}} ,$$
 
-$$L_{0} = \frac{b_{3}}{g_{2}}T_{0}$$
+$$L_{0} = \frac{b_{3}}{g_{2}}T_{0} ,$$
 
-Donde $T_{0}>0$ satisface $g_{1}g_{2}f(T_{0}) = b_{1}b_{2}b_{3}T_{0}.$
-\end{frame}
-
-\begin{frame}
-\frametitle{Puntos de Estabilidad}
-Alrededor del punto de equilibrio:
-
-$$ \frac{dx}{dt} = f'(T_{0})z-b_{1}x$$
-$$ \frac{dy}{dt} = g_{1}x-b_{2}y $$
-$$ \frac{dz}{dt} = g_{2}yt-b_{3}T $$
-
-Donde
-$$ z(t)=T(t)-T_{0} $$
-$$ y(t)=L(t)-L_{0} $$
-$$ x(t)=R(t)-R_{0} $$
+Donde $T_{0}>0$ satisface $g_{1}g_{2}f(T_{0}) = b_{1}b_{2}b_{3}T_{0} .$
 \end{frame}
 
 \begin{frame}
@@ -124,17 +110,26 @@ Cuando $f'(T_{0}) < 0$ no hay estabilidad:
 
 (i) si y sólo si 
 
-$$-\frac{g_{1}g_{2}f'(T_{0})}{b_{1}} > \frac{a_{1}a_{2}}{a_{3}}-1$$
+$$-\frac{g_{1}g_{2}f'(T_{0})}{b_{1}} > \frac{a_{1}a_{2}}{a_{3}}-1 ,$$
 
 Donde:
 
-$$a_{1} = b_{1}+b_{2}+b_{3}$$
-$$a_{2}=b_{1}b_{2}+b_{1}b_{3}+b_{2}b_{3}$$
-$$a_{3}=b_{1}b_{2}b_{3}$$
+$$a_{1} = b_{1}+b_{2}+b_{3} ,$$
+$$a_{2}=b_{1}b_{2}+b_{1}b_{3}+b_{2}b_{3} ,$$
+$$a_{3}=b_{1}b_{2}b_{3} .$$
 
 (ii) si 
 
-$$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$
+$$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 .$$
+\end{frame}
+
+\begin{frame}
+Se trabaja con dos funciones f(T), que son: \\
+
+$$f(T) = A/(K+T^m) ,$$
+
+$$ f(z) = (c-hz)[1-H(z-c/h)] .$$
+
 \end{frame}
 
 \section{Resultados}
@@ -142,21 +137,21 @@ $$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$
 \begin{frame}
 \frametitle{Modelo Simple}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/testosterona1.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/g1.png}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Modelo Simple}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/hormonas1.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/g2.png}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Modelo Simple}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/g3_3D.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/g3.png}
 \end{center}
 \end{frame}
 
@@ -178,45 +173,97 @@ $$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$
 \begin{frame}
 \frametitle{Modelo Simple}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/g6_modelo2.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelos_Simples/Comparacion_modelo_1_y_2.png}
 \end{center}
 \end{frame}
 
 \subsection{Modelo con Fuente Externa}
+
+\begin{frame}
+\frametitle{Modelo con Fuente Externa}
+En general, si se agregan fuentes constantes para las tres hormonas los valores en los que el sistema se deja de oscilar están descritos por:
+
+$$ g_{1} g_{2} W_{R} + b_{1} g_{2} W_{L} + b_{1} b_{2} W_{T} > c b_{1} b_{2} b_{3} / h $$
+
+Lo que arroja valores estacionarios:
+
+$$ R_{o} = W_{R}/b_{1} $$
+
+$$ L_{o} = \frac{g_{1} W_{R}/ b_{1} + W_{L}}{b_{2}}$$
+
+$$ T_{o} = \dfrac{g_{1} g_{2} W_{R}/ b_{1} b_{2} + g_{2} W_{L}/b_{2} + W_{T}}{b_{3}}  $$
+
+
+\end{frame}
+
 \begin{frame}
 \frametitle{Modelo con Fuente Externa}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa/FE_modelo1_concentracion_de_suero.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo1_valor_critico_Wl.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo con Fuente Externa}
+\begin{center}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo1_valor_critico_Wt.png}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Modelo con Fuente Externa}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa/FE_modelo1_valor_critico.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo1_valor_no_critico_Wl.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo con Fuente Externa}
+\begin{center}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo1_valor_no_critico_Wt.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo con Fuente Externa}
+\begin{center}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo1_concentracion_de_suero_Wt.png}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Modelo con Fuente Externa}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa/FE_modelo1_valor_no_critico.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo2_valor_critico_Wl.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo con Fuente Externa}
+\begin{center}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo2_valor_critico_Wt.png}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Modelo con Fuente Externa}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa/FE_modelo2_valor_critico.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo2_valor_no_critico_Wl.png}
 \end{center}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Modelo con Fuente Externa}
 \begin{center}
- \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa/FE_modelo2_valor_no_critico.png}
+ \includegraphics[width=3.5in]{imagenes/Graficas/Modelo_fuente_externa-2/FE_modelo2_valor_no_critico_Wt.png}
 \end{center}
 \end{frame}
+
 
 \subsection{Modelo de Castración}
 
@@ -263,6 +310,29 @@ $$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$
 \end{frame}
 
 \subsection{Pubertad}
+
+\begin{frame}
+\frametitle{Pubertad}
+
+La pubertad está causada por uno o una combinación de los siguientes factores:\\
+
+(i) Un incremento de la sensibilidad pituitaria para LHRH \\
+
+Esto se representa con un incremento en g1
+
+(ii) Un incremento de la sensibilidad gonadal para LH\\
+
+Esto se representa con un incremento en g2
+
+(iii) Un incremento de la sensibilidad hipotálamica hacia la retroalimentación negativa de la testosterona\\
+
+Esto se representa con un incremento en h, dentro de la función f(T)
+
+(iv) Un incremento en la tasa de secreción tónica de LHRH del hipotálamo\\
+
+Esto se representa con un incremento en c, dentro de la función f(T)
+\end{frame}
+
 \begin{frame}
 \frametitle{Modelo de Pubertad}
 \begin{center}
@@ -275,6 +345,15 @@ $$-\frac{T_{0}f'(T_{0})}{f(T_{0})} > 8 $$
 \begin{center}
  \includegraphics[width=3.5in]{imagenes/Graficas/Pubertad/pubertad.png}
 \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusiones}
+$\rightarrow$ Se encontraron valores críticos para Wt, Wr y Wl para el primer modelo.\\
+$\rightarrow$ Se comprobaron númericamente los resultados propuestos por Smith.\\
+$\rightarrow$ Se verificó que el estado estacionario del sistema no depende de las condiciones iniciales.\\
+$\rightarrow$ Se logró modelar la castración y la pubertad para tiempo pequeños.\\
+$\rightarrow$ Para poder describir adecuadamente la concentración de testosterona hay que incluir un retardo detro de la ecuación diferencial.\\
 \end{frame}
 
 \section{Referencias}
